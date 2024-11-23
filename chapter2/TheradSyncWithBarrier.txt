@@ -1,0 +1,21 @@
+This program simulates a race using threads and a barrier to synchronize them:
+    Imports:
+        randrange generates random sleep times for runners (2-4 seconds).
+        Barrier ensures all threads (runners) synchronize at a common point.
+        Thread allows concurrent execution of the runner function.
+
+    Variables:
+        num_runners: Number of participants (3).
+        runners: List of runner names.
+        finish_line: Barrier that blocks until all runners reach it.
+
+    runner Function: Each thread:
+        Pops a runner's name.
+        Simulates running (random sleep).
+        Prints when the runner reaches the barrier.
+        Waits for others at the barrier.
+
+    main Function:
+        Creates and starts threads for all runners.
+        Waits for all threads to finish.
+        Prints "Race over!" when done.

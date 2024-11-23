@@ -1,0 +1,11 @@
+This program demonstrates thread-safe item management using RLock:
+
+    Box Class:
+        Uses RLock to safely modify total_items when adding or removing items.
+
+    Adder: Adds a random number of items to the box, logging each addition.
+
+    Remover: Removes a random number of items from the box, logging each removal.
+
+    Main:
+        Creates a Box instance and starts two threads for adding and removing items concurrently.

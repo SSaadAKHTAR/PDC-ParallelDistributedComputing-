@@ -1,0 +1,31 @@
+Program Flow
+
+    Producer starts producing items into the buffer every 0.5 seconds.
+    Consumer starts consuming items from the buffer every 2 seconds.
+    If the buffer is full, the producer waits until the consumer removes an item.
+    If the buffer is empty, the consumer waits until the producer adds an item.
+    The process continues for 20 iterations each.
+
+Shared Resources:
+
+    items: A list (buffer) with a max size of 10.
+    condition: Manages thread synchronization between the producer and consumer.
+
+Producer:
+
+    Adds items to the buffer every 0.5 seconds.
+    Waits if the buffer is full and notifies the consumer when an item is added.
+
+Consumer:
+
+    Removes items from the buffer every 2 seconds.
+    Waits if the buffer is empty and notifies the producer when an item is consumed.
+
+Synchronization:
+
+    condition.wait(): Pauses the thread when it cannot proceed (e.g., buffer full/empty).
+    condition.notify(): Wakes the other thread after producing/consuming.
+
+Main Function:
+
+    Starts and joins one producer and one consumer thread.

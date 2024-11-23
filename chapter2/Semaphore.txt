@@ -1,0 +1,18 @@
+This program demonstrates the Producer-Consumer problem using a Semaphore for synchronization in multithreading.
+Key Components
+
+    Semaphore:
+        semaphore: A Semaphore initialized with 0. It allows the producer to signal the consumer once an item is available.
+
+    Consumer:
+        Waits for the semaphore using semaphore.acquire() before consuming the item. Logs a message when notified.
+
+    Producer:
+        Waits for 3 seconds, generates a random item, and signals the consumer using semaphore.release().
+
+    Main Function:
+        Starts 10 producer-consumer pairs, where each pair is run as separate threads.
+
+Flow:
+
+    The producer generates an item and notifies the consumer using the semaphore. The consumer waits for the signal, consumes the item, and logs it.

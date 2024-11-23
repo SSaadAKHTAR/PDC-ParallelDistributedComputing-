@@ -1,0 +1,16 @@
+This program solves the Producer-Consumer problem using threads and an Event for synchronization:
+
+    Shared Resources:
+        items: A list for storing produced items.
+        event: Signals the consumer when items are available.
+
+    Producer:
+        Produces 5 random items, adds them to items, and signals the consumer with event.set().
+
+    Consumer:
+        Waits for the producer's signal using event.wait(), then consumes an item from items.
+
+    Main:
+        Starts one producer and one consumer thread, which run concurrently.
+
+Flow: The producer signals the consumer after producing each item, ensuring proper synchronization.
