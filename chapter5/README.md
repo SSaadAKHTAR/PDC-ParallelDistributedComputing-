@@ -24,3 +24,7 @@ Python 3.x
 asyncio (standard Python library)
 concurrent.futures (standard Python library)
 
+# Output
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
