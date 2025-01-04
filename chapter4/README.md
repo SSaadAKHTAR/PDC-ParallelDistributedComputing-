@@ -32,3 +32,6 @@ To follow along with this chapter, ensure you have:
     Library: Install mpi4py via pip:
   
     pip install mpi4py
+# Output
+![alt text](image.png)
+![alt text](image-1.png)
