@@ -1,22 +1,34 @@
-Chapter 4: Message Passing with mpi4py
+# Chapter 4: Message Passing with mpi4py
 
-This chapter demonstrates the basic usage of the Message Passing Interface (MPI) in Python using the mpi4py library. The examples highlight several essential MPI communication methods that allow processes to interact and share data. Key Concepts Covered
+This chapter introduces the basics of Message Passing Interface (MPI) in Python using the mpi4py library. It provides practical examples of essential MPI communication methods that enable processes to interact and share data efficiently.
 
-Broadcasting: How to share a variable from the root process (rank 0) to all other processes in the system.
+📚 Key Concepts
 
-Send/Receive Data: Demonstrates sending and receiving data between two processes, allowing for point-to-point communication.
+🔹 Broadcasting
 
-Gathering Data: Shows how processes can collect data from all participants and send it to a root process for further processing.
+    Share a variable from the root process (rank 0) to all other processes in the system.
 
-Sending Data Between Different Processes: Explains how data can be sent between different processes with specific source and destination settings.
+🔹 Send/Receive Data
 
-Scattering Data: Distributes an array from the root process to all other processes, where each process receives a portion of the data.
+    Demonstrates point-to-point communication by sending and receiving data between two processes.
 
-Requirements
+🔹 Gathering Data
 
-Python 3.x
-mpi4py library (pip install mpi4py)
+    Collect data from all processes and send it to the root process for further processing.
 
-Output
+🔹 Sending Data Between Different Processes
 
-alt text
+    Explains how to send data between processes by specifying source and destination settings.
+
+🔹 Scattering Data
+
+    Distribute an array from the root process to all other processes, with each process receiving a portion of the data.
+
+⚙️ Requirements
+
+To follow along with this chapter, ensure you have:
+
+    Python Version: Python 3.x
+    Library: Install mpi4py via pip:
+  
+    pip install mpi4py
